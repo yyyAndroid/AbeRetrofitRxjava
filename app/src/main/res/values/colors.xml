@@ -3,4 +3,15 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    
+    <color name="colorRed">#e51c23</color>
+    <color name="colorRedTwo">#e84e40</color>
+    <color name="colorOrange">#ff9800</color>
+    <color name="colorOrangeTwo">#ffb74d</color>
+    <color name="colorYellow">#ffeb3b</color>
+    <color name="colorYellowTwo">#fff176</color>
+
+
+    <!--Splash Screen-->
+    <item name="splash_background" type="color">@color/colorPrimary</item>
 </resources>
