@@ -29,7 +29,7 @@ public class IntroActivity extends MaterialIntroActivity {
                         .backgroundColor(R.color.colorRed)
                         .buttonsColor(R.color.colorRedTwo)
 //                        .image(R.drawable.img_office)
-                        .title("欢迎来到区区小事")
+                        .title("欢迎来到一家人")
                         .description("油腻更精彩...")
                         .build());
                 /*,
