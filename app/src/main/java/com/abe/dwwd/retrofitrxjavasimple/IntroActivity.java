@@ -1,5 +1,6 @@
 package com.abe.dwwd.retrofitrxjavasimple;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.FloatRange;
 import android.view.View;
@@ -49,5 +50,8 @@ public class IntroActivity extends MaterialIntroActivity {
                 .build());
     }
 
-
+    @Override
+    public void onFinish() {
+        startActivity(new Intent(this,MainActivity.class));
+    }
 }
