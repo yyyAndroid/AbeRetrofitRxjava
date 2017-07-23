@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.abe.dwwd.retrofitrxjavasimple.activity.LoginActivity">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:background="@color/colorOrange"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+    </android.support.v7.widget.Toolbar>
+   <com.rengwuxian.materialedittext.MaterialEditText
+       android:id="@+id/login_user"
+       android:layout_marginTop="30dp"
+       android:layout_below="@+id/toolbar"
+       android:hint="请输入用户名"
+       android:layout_marginLeft="4dp"
+       android:layout_marginRight="4dp"
+       app:met_helperText="正确输入"
+       app:met_helperTextColor="@android:color/holo_green_dark"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content" />
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/login_pwd"
+        android:hint="请输入密码"
+        android:layout_below="@+id/login_user"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <android.support.v7.widget.AppCompatButton
+        android:layout_below="@+id/login_pwd"
+        android:text="登录"
+        android:layout_width="match_parent"
+        android:layout_height="56dp" />
+</RelativeLayout>

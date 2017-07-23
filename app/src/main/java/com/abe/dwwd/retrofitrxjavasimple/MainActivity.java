@@ -3,9 +3,16 @@ package com.abe.dwwd.retrofitrxjavasimple;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.MenuItem;
+import android.widget.Toast;
 
+import com.abe.dwwd.retrofitrxjavasimple.activity.BaseActivity;
 import com.abe.dwwd.retrofitrxjavasimple.adapter.MyViewPagerAdapter;
+import com.abe.dwwd.retrofitrxjavasimple.widget.CenterToast;
+
+import javax.net.ssl.ManagerFactoryParameters;
 
 import cn.bmob.v3.Bmob;
 import me.majiajie.pagerbottomtabstrip.MaterialMode;
@@ -13,20 +20,21 @@ import me.majiajie.pagerbottomtabstrip.NavigationController;
 import me.majiajie.pagerbottomtabstrip.PageBottomTabLayout;
 import me.majiajie.pagerbottomtabstrip.listener.OnTabItemSelectedListener;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
     NavigationController mNavigationController;
+    Toolbar toolbar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        initView();
         initBmob();
 
-        PageBottomTabLayout pageBottomTabLayout = (PageBottomTabLayout) findViewById(R.id.tab);
 
+        PageBottomTabLayout pageBottomTabLayout = (PageBottomTabLayout) findViewById(R.id.tab);
         mNavigationController = pageBottomTabLayout.material()
-                .addItem(R.mipmap.home,R.mipmap.home_false,"Movies & TV")
+                .addItem(R.mipmap.home,R.mipmap.home_false,"主页")
                 .addItem(R.mipmap.business,R.mipmap.business_false, "Music")
-                .addItem(R.mipmap.mine,R.mipmap.mine_false, "Books")
                 .addItem(R.mipmap.find,R.mipmap.find_false, "Newsstand")
                 .build();
 
@@ -54,7 +62,25 @@ public class MainActivity extends AppCompatActivity {
 //        mNavigationController.setHasMessage(1,true);
     }
 
+    private void initView(){
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar.inflateMenu(R.menu.base_toolbar_menu);
+        toolbar.setTitleTextColor(getResources().getColor(android.R.color.white));
+        toolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem item) {
+                int menuId = item.getItemId();
+                if (menuId == R.id.base_toolbar_pl){
+                    CenterToast.show(MainActivity.this,"彭蕾");
+                }else if (menuId == R.id.base_toolbar_zx){
+                    CenterToast.show(MainActivity.this,"张旭");
+                }
+                return false;
+            }
+        });
+        toolbar.setTitle("e家人");
+    }
     private void initBmob(){
-        Bmob.initialize(this, "Your Application ID");
+        Bmob.initialize(this, "dff84fae5ac00d02d0034d1b13647429");
     }
 }

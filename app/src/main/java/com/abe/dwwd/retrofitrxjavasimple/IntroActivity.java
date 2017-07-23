@@ -5,6 +5,9 @@ import android.os.Bundle;
 import android.support.annotation.FloatRange;
 import android.view.View;
 
+import com.abe.dwwd.retrofitrxjavasimple.activity.LoginActivity;
+import com.abe.dwwd.retrofitrxjavasimple.custom.CustomSlide;
+
 import agency.tango.materialintroscreen.MaterialIntroActivity;
 import agency.tango.materialintroscreen.SlideFragmentBuilder;
 import agency.tango.materialintroscreen.animations.IViewTranslation;
@@ -52,6 +55,6 @@ public class IntroActivity extends MaterialIntroActivity {
 
     @Override
     public void onFinish() {
-        startActivity(new Intent(this,MainActivity.class));
+        startActivity(new Intent(this,LoginActivity.class));
     }
 }

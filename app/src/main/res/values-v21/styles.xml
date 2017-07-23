@@ -1,10 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
-    <style name="Theme.Intro" parent="Theme.AppCompat.NoActionBar">
+    <style name="Theme.Intro" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:windowDrawsSystemBarBackgrounds">true</item>
         <item name="android:windowBackground">@android:color/transparent</item>
         <item name="android:windowIsTranslucent">true</item>
+
+    </style>
+    <style name="AppTheme" parent="Theme.AppCompat.Light">
+        <item name="colorPrimary">@color/colorOrange</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorButtonNormal">@color/colorOrangeTwo</item>//按钮默认颜色
+        <item name="colorControlHighlight">@color/colorOrange</item>//按钮按下的水波纹改变颜色
+    </style>
+<!--
+    <style name="AppTheme.Button" parent="Widget.AppCompat.Button">
+        <item name="colorButtonNormal">@color/white</item>//按钮默认颜色
+        <item name="colorControlHighlight">@color/red</item>//按钮按下的水波纹改变颜色
+    </style>-->
+   <style name="toolbarTheme" parent="Theme.Design.Light.NoActionBar">
     </style>
 
 
