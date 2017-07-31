@@ -12,10 +12,7 @@ import com.abe.dwwd.retrofitrxjavasimple.activity.BaseActivity;
 import com.abe.dwwd.retrofitrxjavasimple.adapter.MyViewPagerAdapter;
 import com.abe.dwwd.retrofitrxjavasimple.widget.CenterToast;
 
-import javax.net.ssl.ManagerFactoryParameters;
 
-import cn.bmob.v3.Bmob;
-import me.majiajie.pagerbottomtabstrip.MaterialMode;
 import me.majiajie.pagerbottomtabstrip.NavigationController;
 import me.majiajie.pagerbottomtabstrip.PageBottomTabLayout;
 import me.majiajie.pagerbottomtabstrip.listener.OnTabItemSelectedListener;
@@ -81,6 +78,6 @@ public class MainActivity extends BaseActivity {
         toolbar.setTitle("e家人");
     }
     private void initBmob(){
-        Bmob.initialize(this, "dff84fae5ac00d02d0034d1b13647429");
+//        Bmob.initialize(this, "dff84fae5ac00d02d0034d1b13647429");
     }
 }

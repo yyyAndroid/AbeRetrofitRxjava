@@ -5,6 +5,8 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
+import com.abe.dwwd.retrofitrxjavasimple.fragment.HomeFragment;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,10 +17,9 @@ public class MyViewPagerAdapter extends FragmentPagerAdapter {
     public MyViewPagerAdapter(FragmentManager fm) {
         super(fm);
         fragmentList = new ArrayList<>();
-        fragmentList.add(AFragment.newInstance("1"));
+        fragmentList.add(new HomeFragment());
         fragmentList.add(AFragment.newInstance("2"));
         fragmentList.add(AFragment.newInstance("3"));
-        fragmentList.add(AFragment.newInstance("4"));
     }
 
     @Override
