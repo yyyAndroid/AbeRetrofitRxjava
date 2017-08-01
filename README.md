@@ -1,5 +1,5 @@
 # AbeRetrofitRxjava
-RxJava + Retrofit 封装的网络请求库（暂未自用）
+RxJava + Retrofit 封装的网络请求库（暂为自用）
 目前包含：图片上传（进度）与基本网络请求
 
 ## 使用
