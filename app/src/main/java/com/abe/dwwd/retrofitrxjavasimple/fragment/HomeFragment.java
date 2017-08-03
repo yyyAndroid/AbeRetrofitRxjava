@@ -14,6 +14,7 @@ import com.abe.dwwd.retrofitrxjavasimple.http.HttpApi;
 import com.abe.dwwd.retrofitrxjavasimple.http.service.RequestInterface;
 import com.abe.dwwd.rxretrofithttputils.HttpInstance.CommonObserver;
 import com.abe.dwwd.rxretrofithttputils.RxRetrofitHttpUtils;
+import com.abe.dwwd.rxretrofithttputils.interceptor.RxApiManager;
 import com.abe.dwwd.rxretrofithttputils.interceptor.Transformer;
 import com.abe.dwwd.rxretrofithttputils.base.ResultBean;
 import io.reactivex.disposables.Disposable;
@@ -56,7 +57,7 @@ public class HomeFragment extends BaseFragment {
                 .subscribe(new CommonObserver<ResultBean<BannerimageInfo>>() {
                     @Override
                     protected void getDisposable(Disposable d) {
-
+                        RxApiManager.get().add(HomeFragment.this,d);
                     }
 
                     @Override
@@ -69,5 +70,11 @@ public class HomeFragment extends BaseFragment {
 
                     }
                 });
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        RxApiManager.get().cancel(this);
     }
 }

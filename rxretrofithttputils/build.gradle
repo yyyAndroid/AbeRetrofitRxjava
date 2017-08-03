@@ -50,7 +50,7 @@ publish {
     userOrg = 'dwwd'//bintray.com用户名
     groupId = 'com.abe.dwwd'//jcenter上的路径
     artifactId = 'rxretrofithttputils'//项目名称
-    publishVersion = '1.0.0'//版本号
+    publishVersion = '1.0.1'//版本号
     desc = 'android httputils?'//描述，不重要
     website = 'https://github.com/yyyAndroid/AbeRetrofitRxjava'//网站，不重要
 }

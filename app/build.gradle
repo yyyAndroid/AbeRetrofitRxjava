@@ -58,4 +58,5 @@ dependencies {
     compile 'com.rengwuxian.materialedittext:library:2.1.4'
     testCompile 'junit:junit:4.12'
     compile project(':rxretrofithttputils')
+
 }

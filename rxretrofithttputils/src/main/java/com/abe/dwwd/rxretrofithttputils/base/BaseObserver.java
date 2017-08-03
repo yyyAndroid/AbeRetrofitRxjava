@@ -1,7 +1,5 @@
 package com.abe.dwwd.rxretrofithttputils.base;
 
-import android.app.Application;
-import android.widget.Toast;
 
 import com.abe.dwwd.rxretrofithttputils.Utils.CenterToast;
 import com.abe.dwwd.rxretrofithttputils.exception.ApiException;
