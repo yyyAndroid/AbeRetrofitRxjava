@@ -39,13 +39,8 @@ captures/
 
 # Keystore files
 
-
+local.properties
 # External native build folder generated in Android Studio 2.2 and later
 .externalNativeBuild
 proguard-rules.pro
 
-app/src/jni/
-libs/
-src/main/java/com/abe/dwwd/rxretrofithttputils/interceptor/RxActionManager.java
-src/main/java/com/abe/dwwd/rxretrofithttputils/interceptor/RxApiManager.java
-src/main/res/drawable/

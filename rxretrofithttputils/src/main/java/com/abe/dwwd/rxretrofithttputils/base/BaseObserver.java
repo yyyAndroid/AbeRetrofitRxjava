@@ -1,6 +1,8 @@
 package com.abe.dwwd.rxretrofithttputils.base;
 
 
+import android.content.Context;
+
 import com.abe.dwwd.rxretrofithttputils.Utils.CenterToast;
 import com.abe.dwwd.rxretrofithttputils.exception.ApiException;
 
@@ -17,7 +19,11 @@ import io.reactivex.disposables.Disposable;
  */
 
 public  abstract class BaseObserver<T> implements Observer<T>, ISubscriber<T>{
+    Context context;
 
+    public BaseObserver(Context context) {
+        this.context = context;
+    }
 
     @Override
     public void onSubscribe(@NonNull Disposable d) {
@@ -68,7 +74,7 @@ public  abstract class BaseObserver<T> implements Observer<T>, ISubscriber<T>{
     }
 
     protected void showToast(String msg) {
-        CenterToast.show(BaseRxHttpApplication.getContext(),msg);
+        CenterToast.show(context,msg);
     }
 
 }

@@ -54,7 +54,7 @@ public class HomeFragment extends BaseFragment {
                 .createSingleApi(RequestInterface.class)
                 .getCall()
                 .compose(Transformer.<ResultBean<BannerimageInfo>>switchSchedulers())
-                .subscribe(new CommonObserver<ResultBean<BannerimageInfo>>() {
+                .subscribe(new CommonObserver<ResultBean<BannerimageInfo>>(getContext()) {
                     @Override
                     protected void getDisposable(Disposable d) {
                         RxApiManager.get().add(HomeFragment.this,d);

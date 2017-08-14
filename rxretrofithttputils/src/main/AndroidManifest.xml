@@ -3,7 +3,6 @@
     package="com.abe.dwwd.rxretrofithttputils">
 
     <application android:allowBackup="true" android:label="@string/app_name"
-        android:name=".base.BaseRxHttpApplication"
         android:supportsRtl="true">
 
     </application>

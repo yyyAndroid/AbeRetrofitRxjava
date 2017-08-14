@@ -2,6 +2,7 @@ package com.abe.dwwd.rxretrofithttputils.HttpInstance;
 
 
 import android.app.Dialog;
+import android.content.Context;
 
 
 import com.abe.dwwd.rxretrofithttputils.base.BaseObserver;
@@ -19,10 +20,12 @@ public abstract class CommonObserver<T> extends BaseObserver<T> {
 
     private Dialog mProgressDialog;
 
-    public CommonObserver() {
+    public CommonObserver(Context context) {
+        super(context);
     }
 
-    public CommonObserver(Dialog progressDialog) {
+    public CommonObserver(Context context,Dialog progressDialog) {
+        super(context);
         mProgressDialog = progressDialog;
     }
 
